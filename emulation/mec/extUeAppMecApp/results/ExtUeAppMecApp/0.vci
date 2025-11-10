@@ -1,0 +1,1733 @@
+file 1793105 1658474635                                         
+version 3
+run ExtUeAppMecApp-0-20220722-09:23:15-3303
+attr configname ExtUeAppMecApp
+attr datetime 20220722-09:23:15
+attr datetimef 20220722-092315
+attr experiment ExtUeAppMecApp
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network simu5g.emulation.mec.extUeAppMecApp.ExtUeAppMecAppExample
+attr processid 3303
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config *.upf.ipv4.routingTable.routingFile "\"routing/upf.mrt\""
+config *.iUpf.ipv4.routingTable.routingFile "\"routing/iUpf.mrt\""
+config *.gNodeB1.ipv4.routingTable.routingFile "\"routing/gnb.mrt\""
+config *.ue.ipv4.routingTable.routingFile "\"routing/ue.mrt\""
+config *.ualcmp.ipv4.routingTable.routingFile "\"routing/ualcmp.mrt\""
+config *.mecHost1.upf_mec.ipv4.routingTable.routingFile "\"routing/mecHost1_upf.mrt\""
+config *.mecHost1.virtualisationInfrastructure.ipv4.routingTable.routingFile "\"routing/mecHost1_vi.mrt\""
+config *.mecHost1.virtualisationInfrastructure.numExtEthInterfaces 1
+config *.mecHost1.virtualisationInfrastructure.extEth[0].typename ExtLowerEthernetInterface
+config *.mecHost1.virtualisationInfrastructure.extEth[0].device "\"sim-veth1\""
+config *.mecHost1.virtualisationInfrastructure.ipv4.forwarding true
+config **.extMeAppsAddress "\"192.168.2.0/24\""
+config *.ue.numEthInterfaces 1
+config *.ue.eth[0].typename ExtLowerEthernetInterface
+config *.ue.eth[0].device "\"sim-veth2\""
+config *.ue.extHostAddress "\"192.168.3.2\""
+config *.ue.ipv4.forwarding true
+config *.ue.numPcapRecorders 0
+config *.ue.pcapRecorder[*].pcapFile "\"ue.pcap\""
+config *.ue.pcapRecorder[0].moduleNamePatterns "\"eth[0]\""
+config *.ue.pcapRecorder[*].pcapLinkType 1
+config *.ue.numApps 1
+config *.ue.app[0].typename DeviceApp
+config *.ue.app[0].localPort 4500
+config *.ue.app[0].UALCMPAddress "\"ualcmp\""
+config *.ue.app[0].UALCMPPort 1000
+config **.mecOrchestrator.mecHostList "\"mecHost1\""
+config **.mecOrchestrator.mecApplicationPackageList "\"WarningAlertApp_External\""
+config **.mecHost1.mecPlatformManager.mecOrchestrator "\"mecOrchestrator\""
+config **.mecHost1.bsList "\"gNodeB1\""
+config *.mecHost1.maxMECApps 100
+config *.mecHost1.maxRam 32GB
+config *.mecHost1.maxDisk 100TB
+config *.mecHost1.maxCpuSpeed 400000
+config *.mecHost1.mecPlatform.numMecServices 1
+config *.mecHost1.mecPlatform.mecService[0].typename LocationService
+config *.mecHost1.mecPlatform.mecService[0].localAddress "\"mecHost1.virtualisationInfrastructure\""
+config *.mecHost1.mecPlatform.mecService[0].localPort 10020
+config *.mecHost1.mecPlatform.mecService[0].rng-0 0
+config *.mecHost1.mecPlatform.mecService[0].rng-1 1
+config *.mecHost1.mecPlatform.mecService[0].requestServiceTime 20us
+config *.mecHost1.mecPlatform.mecService[0].subscriptionServiceTime 11us
+config *.mecHost1.mecPlatform.serviceRegistry.localAddress "\"mecHost1.virtualisationInfrastructure\""
+config *.mecHost1.mecPlatform.serviceRegistry.localPort 10021
+config *.mecHost1.mecPlatform.serviceRegistry.rng-0 0
+config *.mecHost1.mecPlatform.serviceRegistry.rng-1 1
+config scheduler-class inet::RealTimeScheduler
+config cmdenv-express-mode true
+config image-path ../../../images
+config output-scalar-file-append false
+config sim-time-limit 40s
+config num-rngs 3
+config network simu5g.emulation.mec.extUeAppMecApp.ExtUeAppMecAppExample
+config **.routingRecorder.enabled false
+config **.networkConfiguratorModule "\"\""
+config **.fcsMode "\"computed\""
+config **.crcMode "\"computed\""
+config output-scalar-file results/ExtUeAppMecApp/0.sca
+config output-vector-file results/ExtUeAppMecApp/0.vec
+config seed-set 0
+config *.playgroundSizeX 1100m
+config *.playgroundSizeY 800m
+config *.playgroundSizeZ 50m
+config **.mobility.constraintAreaMaxX 1000m
+config **.mobility.constraintAreaMaxY 1000m
+config **.mobility.constraintAreaMinX 0m
+config **.mobility.constraintAreaMinY 0m
+config **.mobility.constraintAreaMinZ 0m
+config **.mobility.constraintAreaMaxZ 0m
+config **.mobility.initFromDisplayString false
+config **.amcType "\"NRAmc\""
+config **.pilotMode "\"ROBUST_CQI\""
+config **.targetBler 0.01
+config **.blerShift 5
+config **.fbPeriod 40
+config *.configurator.config "xmldoc(\"./demo.xml\")"
+config *.gNodeB1.mobility.initialX 137m
+config *.gNodeB1.mobility.initialY 260m
+config *.ue*.macCellId 0
+config *.ue*.masterId 0
+config *.ue*.nrMacCellId 1
+config *.ue*.nrMasterId 1
+config *.ue.mobility.initFromDisplayString false
+config *.ue.mobility.typename LinearMobility
+config *.ue.mobility.updateInterval 0.05s
+config **.numues 1
+config **.ue.mobility.initialX 180m
+config **.ue.mobility.initialY 50m
+config **.ue.mobility.initialMovementHeading 90deg
+config **.ue.mobility.speed 10mps
+config *.uerierAggregation.numComponentueriers 1
+config *.uerierAggregation.componentuerier[0].numerologyIndex 0
+config *.uerierAggregation.componentuerier[0].carrierFrequency 2GHz
+config *.uerierAggregation.componentuerier[0].numBands 10
+config *.gNodeB1.cellularNic.numCarriers 1
+config *.gNodeB1.cellularNic.channelModel[0].componentCarrierIndex 0
+config *.ue.cellularNic.numNRCarriers 1
+config *.ue.cellularNic.nrChannelModel[0].componentCarrierIndex 0
+
+vector 0 ExtUeAppMecAppExample.upf.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 1 ExtUeAppMecAppExample.upf.pppIf.ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 2 ExtUeAppMecAppExample.upf.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 3 ExtUeAppMecAppExample.upf.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 4 ExtUeAppMecAppExample.upf.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 5 ExtUeAppMecAppExample.iUpf.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 6 ExtUeAppMecAppExample.iUpf.ppp[1].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 7 ExtUeAppMecAppExample.iUpf.ppp[2].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 8 ExtUeAppMecAppExample.iUpf.pppIf.ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 9 ExtUeAppMecAppExample.iUpf.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 10 ExtUeAppMecAppExample.iUpf.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 11 ExtUeAppMecAppExample.iUpf.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 12 ExtUeAppMecAppExample.gNodeB1.pppIf.ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 13 ExtUeAppMecAppExample.gNodeB1.pppMEHostIf.ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 14 ExtUeAppMecAppExample.gNodeB1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 15 ExtUeAppMecAppExample.gNodeB1.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 16 ExtUeAppMecAppExample.gNodeB1.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 17 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 18 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 19 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 20 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 21 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 22 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 23 ExtUeAppMecAppExample.mecHost1.upf_mec.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 24 ExtUeAppMecAppExample.mecHost1.upf_mec.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 25 ExtUeAppMecAppExample.mecHost1.upf_mec.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 26 ExtUeAppMecAppExample.ualcmp.pppIf.ppp transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source transmissionStateChanged
+attr title "tx state"
+vector 27 ExtUeAppMecAppExample.ualcmp.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 28 ExtUeAppMecAppExample.ualcmp.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 29 ExtUeAppMecAppExample.ualcmp.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 30 ExtUeAppMecAppExample.ue.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetSentToUpper
+attr title "packets passed up, count"
+vector 31 ExtUeAppMecAppExample.ue.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), count"
+vector 32 ExtUeAppMecAppExample.ue.udp droppedPkBadChecksum:vector(count) ETV
+attr interpolationmode none
+attr recordingmode vector(count)
+attr source packetDropReasonIsIncorrectlyReceived(packetDropped)
+attr title "packets dropped (checksum error), count"
+vector 33 ExtUeAppMecAppExample.ue.cellularNic.phy servingCell:vector ETV
+attr recordingmode vector
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE"
+attr unit ""
+vector 34 ExtUeAppMecAppExample.ue.cellularNic.nrPhy servingCell:vector ETV
+attr recordingmode vector
+attr source servingCell
+attr title "ID of the serving eNodeB for the UE"
+attr unit ""
+vector 35 ExtUeAppMecAppExample.ue.tcp.conn-25 tcpRcvQueueBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 36 ExtUeAppMecAppExample.ue.tcp.conn-25 rcvAdv:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 37 ExtUeAppMecAppExample.ue.tcp.conn-25 rcvWnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 38 ExtUeAppMecAppExample.ue.tcp.conn-25 sndAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 39 ExtUeAppMecAppExample.ue.cellularNic.pdcpRrc receivedPacketFromUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromUpperLayer
+vector 40 ExtUeAppMecAppExample.ue.cellularNic.pdcpRrc sentPacketToLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToLowerLayer
+vector 41 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um receivedPacketFromUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromUpperLayer
+vector 42 ExtUeAppMecAppExample.ue.cellularNic.nrMac receivedPacketFromUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromUpperLayer
+vector 43 ExtUeAppMecAppExample.gNodeB1.cellularNic.mac avgServedBlocksUl:vector ETV
+attr recordingmode vector
+attr source avgServedBlocksUl
+attr title "Avg Served Blocks Ul"
+attr unit blocks
+vector 44 ExtUeAppMecAppExample.gNodeB1.cellularNic.mac avgServedBlocksDl:vector ETV
+attr recordingmode vector
+attr source avgServedBlocksDl
+attr title "Avg Served Blocks Dl"
+attr unit blocks
+vector 45 ExtUeAppMecAppExample.ue.cellularNic.nrMac sentPacketToLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToLowerLayer
+vector 46 ExtUeAppMecAppExample.ue.cellularNic.nrChannelModel[0] measuredSinrUl:vector ETV
+attr recordingmode vector
+attr source measuredSinrUl
+attr title "SINR measured at feedback computation, UL"
+attr unit dB
+vector 47 ExtUeAppMecAppExample.ue.cellularNic.nrChannelModel[0] measuredSinrDl:vector ETV
+attr recordingmode vector
+attr source measuredSinrDl
+attr title "SINR measured at feedback computation, DL"
+attr unit dB
+vector 48 ExtUeAppMecAppExample.gNodeB1.cellularNic.mac receivedPacketFromLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromLowerLayer
+vector 49 ExtUeAppMecAppExample.gNodeB1.cellularNic.mac sentPacketToLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToLowerLayer
+vector 50 ExtUeAppMecAppExample.ue.cellularNic.nrMac receivedPacketFromLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromLowerLayer
+vector 51 ExtUeAppMecAppExample.ue.cellularNic.nrMac sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToUpperLayer
+vector 52 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPacketLossUl:vector ETV
+attr recordingmode vector
+attr source rlcPacketLossUl
+attr title "rlc Packet Loss"
+attr unit ""
+vector 53 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um sentPacketToLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToLowerLayer
+vector 54 ExtUeAppMecAppExample.ue.cellularNic.nrPhy averageCqiUl:vector ETV
+attr recordingmode vector
+attr source averageCqiUl
+attr title "Average Cqi reported in UL"
+attr unit cqi
+vector 55 ExtUeAppMecAppExample.ue.cellularNic.nrChannelModel[0] rcvdSinrUl:vector ETV
+attr recordingmode vector
+attr source rcvdSinrUl
+attr title "SINR measured at packet reception, UL"
+attr unit dB
+vector 56 ExtUeAppMecAppExample.ue.cellularNic.nrMac macDelayUl:vector ETV
+attr recordingmode vector
+attr source macDelayUl
+attr title "Delay at the MAC layer UL"
+attr unit s
+vector 57 ExtUeAppMecAppExample.gNodeB1.cellularNic.mac sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToUpperLayer
+vector 58 ExtUeAppMecAppExample.gNodeB1.cellularNic.rlc.um receivedPacketFromLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromLowerLayer
+vector 59 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPduThroughputUl:vector ETV
+attr recordingmode vector
+attr source rlcPduThroughputUl
+attr title "Throughput at the rlc layer UL"
+attr unit Bps
+vector 60 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPduDelayUl:vector ETV
+attr recordingmode vector
+attr source rlcPduDelayUl
+attr title "Delay at the rlc layer UL"
+attr unit s
+vector 61 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcThroughputUl:vector ETV
+attr recordingmode vector
+attr source rlcThroughputUl
+attr title "Throughput at the rlc layer UL"
+attr unit Bps
+vector 62 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPacketLossTotal:vector ETV
+attr recordingmode vector
+attr source rlcPacketLossTotal
+attr title "rlc Packet Loss"
+attr unit ""
+vector 63 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcDelayUl:vector ETV
+attr recordingmode vector
+attr source rlcDelayUl
+attr title "Delay at the rlc layer UL"
+attr unit s
+vector 64 ExtUeAppMecAppExample.gNodeB1.cellularNic.rlc.um sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToUpperLayer
+vector 65 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPduPacketLossUl:vector ETV
+attr recordingmode vector
+attr source rlcPduPacketLossUl
+attr title "rlc Packet Loss"
+attr unit ""
+vector 66 ExtUeAppMecAppExample.gNodeB1.cellularNic.pdcpRrc receivedPacketFromLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromLowerLayer
+vector 67 ExtUeAppMecAppExample.gNodeB1.cellularNic.pdcpRrc sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToUpperLayer
+vector 68 ExtUeAppMecAppExample.gNodeB1.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 69 ExtUeAppMecAppExample.gNodeB1.pppIf.queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 70 ExtUeAppMecAppExample.gNodeB1.pppIf.queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 71 ExtUeAppMecAppExample.gNodeB1.pppIf.queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 72 ExtUeAppMecAppExample.gNodeB1.pppIf.ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 73 ExtUeAppMecAppExample.gNodeB1.pppIf.queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 74 ExtUeAppMecAppExample.gNodeB1.pppIf.queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 75 ExtUeAppMecAppExample.iUpf.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 76 ExtUeAppMecAppExample.iUpf.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 77 ExtUeAppMecAppExample.iUpf.ppp[1].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 78 ExtUeAppMecAppExample.iUpf.ppp[1].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 79 ExtUeAppMecAppExample.iUpf.ppp[1].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 80 ExtUeAppMecAppExample.iUpf.ppp[1].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 81 ExtUeAppMecAppExample.iUpf.ppp[1].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 82 ExtUeAppMecAppExample.iUpf.ppp[1].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 83 ExtUeAppMecAppExample.upf.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 84 ExtUeAppMecAppExample.upf.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 85 ExtUeAppMecAppExample.upf.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 86 ExtUeAppMecAppExample.upf.pppIf.queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 87 ExtUeAppMecAppExample.upf.pppIf.queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 88 ExtUeAppMecAppExample.upf.pppIf.queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 89 ExtUeAppMecAppExample.upf.pppIf.ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 90 ExtUeAppMecAppExample.upf.pppIf.queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 91 ExtUeAppMecAppExample.upf.pppIf.queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 92 ExtUeAppMecAppExample.ualcmp.pppIf.ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 93 ExtUeAppMecAppExample.ualcmp.pppIf.ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 94 ExtUeAppMecAppExample.ualcmp.tcp.conn-8 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 95 ExtUeAppMecAppExample.ualcmp.tcp.conn-8 rcvAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 96 ExtUeAppMecAppExample.ualcmp.tcp.conn-8 tcpRcvPayloadBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 97 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 rcvAdv:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 98 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 sndWnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 99 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 tcpRcvQueueBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 100 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 rcvWnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 101 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 sndAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 102 ExtUeAppMecAppExample.ualcmp.pppIf.queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 103 ExtUeAppMecAppExample.ualcmp.pppIf.queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 104 ExtUeAppMecAppExample.ualcmp.pppIf.queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 105 ExtUeAppMecAppExample.ualcmp.pppIf.ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 106 ExtUeAppMecAppExample.ualcmp.pppIf.queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 107 ExtUeAppMecAppExample.ualcmp.pppIf.queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 108 ExtUeAppMecAppExample.upf.pppIf.ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 109 ExtUeAppMecAppExample.upf.pppIf.ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 110 ExtUeAppMecAppExample.upf.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 111 ExtUeAppMecAppExample.upf.ppp[0].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 112 ExtUeAppMecAppExample.upf.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 113 ExtUeAppMecAppExample.upf.ppp[0].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 114 ExtUeAppMecAppExample.upf.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 115 ExtUeAppMecAppExample.upf.ppp[0].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 116 ExtUeAppMecAppExample.upf.ppp[0].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 117 ExtUeAppMecAppExample.iUpf.ppp[1].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 118 ExtUeAppMecAppExample.iUpf.ppp[1].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 119 ExtUeAppMecAppExample.iUpf.ppp[0].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 120 ExtUeAppMecAppExample.iUpf.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 121 ExtUeAppMecAppExample.iUpf.ppp[0].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 122 ExtUeAppMecAppExample.iUpf.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 123 ExtUeAppMecAppExample.iUpf.ppp[0].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 124 ExtUeAppMecAppExample.iUpf.ppp[0].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 125 ExtUeAppMecAppExample.gNodeB1.pppIf.ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 126 ExtUeAppMecAppExample.gNodeB1.pppIf.ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 127 ExtUeAppMecAppExample.gNodeB1.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 128 ExtUeAppMecAppExample.gNodeB1.cellularNic.pdcpRrc receivedPacketFromUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromUpperLayer
+vector 129 ExtUeAppMecAppExample.gNodeB1.cellularNic.pdcpRrc sentPacketToLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToLowerLayer
+vector 130 ExtUeAppMecAppExample.gNodeB1.cellularNic.rlc.um receivedPacketFromUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromUpperLayer
+vector 131 ExtUeAppMecAppExample.gNodeB1.cellularNic.mac receivedPacketFromUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromUpperLayer
+vector 132 ExtUeAppMecAppExample.gNodeB1.cellularNic.rlc.um rlcPacketLossDl:vector ETV
+attr recordingmode vector
+attr source rlcPacketLossDl
+attr title "rlc Packet Loss"
+attr unit ""
+vector 133 ExtUeAppMecAppExample.gNodeB1.cellularNic.rlc.um sentPacketToLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToLowerLayer
+vector 134 ExtUeAppMecAppExample.ue.cellularNic.nrMac harqErrorRate_1st_Ul:vector ETV
+attr recordingmode vector
+attr source harqErrorRate_1st_Ul
+attr title "Harq Error Rate Ul (1st tx)"
+attr unit ""
+vector 135 ExtUeAppMecAppExample.ue.cellularNic.nrMac harqErrorRateUl:vector ETV
+attr recordingmode vector
+attr source harqErrorRateUl
+attr title "Harq Error Rate Ul"
+attr unit ""
+vector 136 ExtUeAppMecAppExample.ue.cellularNic.nrMac harqTxAttemptsUl:vector ETV
+attr recordingmode vector
+attr source harqTxAttemptsUl
+attr title "Harq Tx Attempts Ul"
+attr unit ""
+vector 137 ExtUeAppMecAppExample.ue.cellularNic.nrPhy averageCqiDl:vector ETV
+attr recordingmode vector
+attr source averageCqiDl
+attr title "Average Cqi reported in DL"
+attr unit cqi
+vector 138 ExtUeAppMecAppExample.ue.cellularNic.nrChannelModel[0] distance:vector ETV
+attr recordingmode vector
+attr source distance
+attr title "distance between UE and serving base station"
+attr unit meters
+vector 139 ExtUeAppMecAppExample.ue.cellularNic.nrChannelModel[0] rcvdSinrDl:vector ETV
+attr recordingmode vector
+attr source rcvdSinrDl
+attr title "SINR measured at packet reception, DL"
+attr unit dB
+vector 140 ExtUeAppMecAppExample.gNodeB1.cellularNic.mac macDelayDl:vector ETV
+attr recordingmode vector
+attr source macDelayDl
+attr title "Delay at the MAC layer UL"
+attr unit s
+vector 141 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um receivedPacketFromLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromLowerLayer
+vector 142 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPduThroughputDl:vector ETV
+attr recordingmode vector
+attr source rlcPduThroughputDl
+attr title "Throughput at the rlc layer DL"
+attr unit Bps
+vector 143 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPduDelayDl:vector ETV
+attr recordingmode vector
+attr source rlcPduDelayDl
+attr title "Delay at the rlc layer UL"
+attr unit s
+vector 144 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcThroughputDl:vector ETV
+attr recordingmode vector
+attr source rlcThroughputDl
+attr title "Throughput at the rlc layer DL"
+attr unit Bps
+vector 145 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPacketLossDl:vector ETV
+attr recordingmode vector
+attr source rlcPacketLossDl
+attr title "rlc Packet Loss"
+attr unit ""
+vector 146 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcDelayDl:vector ETV
+attr recordingmode vector
+attr source rlcDelayDl
+attr title "Delay at the rlc layer DL"
+attr unit s
+vector 147 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToUpperLayer
+vector 148 ExtUeAppMecAppExample.ue.cellularNic.nrRlc.um rlcPduPacketLossDl:vector ETV
+attr recordingmode vector
+attr source rlcPduPacketLossDl
+attr title "rlc Packet Loss"
+attr unit ""
+vector 149 ExtUeAppMecAppExample.ue.cellularNic.pdcpRrc receivedPacketFromLowerLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source receivedPacketFromLowerLayer
+vector 150 ExtUeAppMecAppExample.ue.cellularNic.pdcpRrc sentPacketToUpperLayer:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source sentPacketToUpperLayer
+vector 151 ExtUeAppMecAppExample.ue.tcp.conn-25 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 152 ExtUeAppMecAppExample.ue.tcp.conn-25 rcvAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 153 ExtUeAppMecAppExample.ue.tcp.conn-25 tcpRcvPayloadBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 154 ExtUeAppMecAppExample.ue.tcp.conn-25 sndWnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 155 ExtUeAppMecAppExample.ue.cellularNic.nrMac harqErrorRate_1st_Dl:vector ETV
+attr recordingmode vector
+attr source harqErrorRate_1st_Dl
+attr title "Harq Error Rate Dl (1st tx)"
+attr unit ""
+vector 156 ExtUeAppMecAppExample.ue.cellularNic.nrMac harqErrorRateDl:vector ETV
+attr recordingmode vector
+attr source harqErrorRateDl
+attr title "Harq Error Rate Dl"
+attr unit ""
+vector 157 ExtUeAppMecAppExample.ue.cellularNic.nrMac harqTxAttemptsDl:vector ETV
+attr recordingmode vector
+attr source harqTxAttemptsDl
+attr title "Harq Tx Attempts Dl"
+attr unit ""
+vector 158 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 159 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 rcvAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 160 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 tcpRcvPayloadBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 161 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 unacked:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 162 ExtUeAppMecAppExample.ue.eth[0].socket packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 163 ExtUeAppMecAppExample.ue.eth[0].socket packetSentFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets sent to higher layer, packetBytes"
+vector 164 ExtUeAppMecAppExample.ue.encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, packetBytes"
+vector 165 ExtUeAppMecAppExample.ue.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 166 ExtUeAppMecAppExample.ue.tcp.conn-25 sndNxt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 167 ExtUeAppMecAppExample.ue.tcp.conn-25 unacked:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 168 ExtUeAppMecAppExample.gNodeB1.pppIf.queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 169 ExtUeAppMecAppExample.gNodeB1.pppIf.queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 170 ExtUeAppMecAppExample.iUpf.ppp[1].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 171 ExtUeAppMecAppExample.iUpf.ppp[1].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 172 ExtUeAppMecAppExample.upf.pppIf.queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 173 ExtUeAppMecAppExample.upf.pppIf.queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 174 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 dupAcks:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 175 ExtUeAppMecAppExample.ualcmp.pppIf.queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 176 ExtUeAppMecAppExample.ualcmp.pppIf.queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 177 ExtUeAppMecAppExample.upf.ppp[0].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 178 ExtUeAppMecAppExample.upf.ppp[0].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 179 ExtUeAppMecAppExample.iUpf.ppp[0].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 180 ExtUeAppMecAppExample.iUpf.ppp[0].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 181 ExtUeAppMecAppExample.ualcmp.ualcmpApp responseTimeStat:vector ETV
+attr recordingmode vector
+attr source responseTime
+attr title "Response time of foreground requests"
+vector 182 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 sndNxt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 183 ExtUeAppMecAppExample.ue.tcp.conn-25 rtt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 184 ExtUeAppMecAppExample.ue.tcp.conn-25 srtt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 185 ExtUeAppMecAppExample.ue.tcp.conn-25 rttvar:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 186 ExtUeAppMecAppExample.ue.tcp.conn-25 rto:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 187 ExtUeAppMecAppExample.ue.tcp.conn-25 cwnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 188 ExtUeAppMecAppExample.ue.tcp.conn-25 ssthresh:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 189 ExtUeAppMecAppExample.ue.tcp.conn-25 dupAcks:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 190 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 rtt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 191 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 srtt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 192 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 rttvar:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 193 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 rto:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 194 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 cwnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 195 ExtUeAppMecAppExample.ualcmp.tcp.conn-26 ssthresh:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 196 ExtUeAppMecAppExample.ue.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 197 ExtUeAppMecAppExample.ue.ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr recordingmode vector(packetBytes)
+attr source arpRequestSent
+attr title "ARP request sent, packetBytes"
+vector 198 ExtUeAppMecAppExample.ue.encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, packetBytes"
+vector 199 ExtUeAppMecAppExample.ue.eth[0].socket packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 200 ExtUeAppMecAppExample.ue.eth[0].socket packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 201 ExtUeAppMecAppExample.ue.ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr recordingmode vector(packetBytes)
+attr source arpReplySent
+attr title "ARP replies sent, packetBytes"
+vector 202 ExtUeAppMecAppExample.iUpf.ppp[2].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 203 ExtUeAppMecAppExample.iUpf.ppp[2].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 204 ExtUeAppMecAppExample.iUpf.ppp[2].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 205 ExtUeAppMecAppExample.iUpf.ppp[2].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 206 ExtUeAppMecAppExample.iUpf.ppp[2].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 207 ExtUeAppMecAppExample.iUpf.ppp[2].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 208 ExtUeAppMecAppExample.iUpf.ppp[2].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 209 ExtUeAppMecAppExample.iUpf.ppp[2].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 210 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 211 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 212 ExtUeAppMecAppExample.mecHost1.upf_mec.udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 213 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 214 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 215 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 216 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 217 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 218 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 219 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 220 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 221 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 222 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 223 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr recordingmode vector(packetBytes)
+attr source arpRequestSent
+attr title "ARP request sent, packetBytes"
+vector 224 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.encap encapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source encapPk
+attr title "packets encapsulated, packetBytes"
+vector 225 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.extEth[0].socket packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, packetBytes"
+vector 226 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.extEth[0].socket packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 227 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.extEth[0].socket packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetReceived
+attr title "packets received, packetBytes"
+vector 228 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.extEth[0].socket packetSentFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets sent to higher layer, packetBytes"
+vector 229 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.encap decapPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source decapPk
+attr title "packets decapsulated, packetBytes"
+vector 230 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr recordingmode vector(packetBytes)
+attr source arpReplySent
+attr title "ARP replies sent, packetBytes"
+vector 231 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-6 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 232 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-6 rcvAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 233 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-6 tcpRcvPayloadBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 234 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 rcvAdv:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 235 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 sndWnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 236 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 tcpRcvQueueBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 237 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 rcvWnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 238 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 sndAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 239 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 rcvSeq:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 240 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 rcvAck:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 241 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 tcpRcvPayloadBytes:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 242 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 unacked:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 243 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 dupAcks:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 244 ExtUeAppMecAppExample.mecHost1.mecPlatform.mecService[0] responseTimeStat:vector ETV
+attr recordingmode vector
+attr source responseTime
+attr title "Response time of foreground requests"
+vector 245 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 sndNxt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 246 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 rtt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 247 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 srtt:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 248 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 rttvar:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 249 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 rto:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 250 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 cwnd:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 251 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.tcp.conn-27 ssthresh:vector ETV
+attr interpolationmode sample-hold
+attr recordingmode vector
+vector 252 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 253 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 254 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 255 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 256 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 257 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 258 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 259 ExtUeAppMecAppExample.mecHost1.virtualisationInfrastructure.pppIf[0].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 260 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 261 ExtUeAppMecAppExample.mecHost1.upf_mec.pppIf.ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+vector 262 ExtUeAppMecAppExample.mecHost1.upf_mec.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSent
+attr title "packets sent, packetBytes"
+vector 263 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].queue incomingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPushStarted)
+attr title "incoming packet lengths"
+attr unit b
+vector 264 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 265 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source queueingTime(packetPulled)
+attr title "queueing times"
+attr unit s
+vector 266 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].queue outgoingPacketLengths:vector ETV
+attr interpolationmode none
+attr recordingmode vector
+attr source packetLength(packetPulled)
+attr title "outgoing packet lengths"
+attr unit b
+vector 267 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 268 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].ppp txPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToLower
+attr title "packets transmitted, packetBytes"
+vector 269 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].queue queueLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + count(packetPushStarted) - count(packetPulled) - count(packetRemoved) - count(packetDropped)))"
+attr title "queue length"
+attr unit pk
+vector 270 ExtUeAppMecAppExample.mecHost1.upf_mec.ppp[0].queue queueBitLength:vector ETV
+attr autoWarmupFilter false
+attr interpolationmode sample-hold
+attr recordingmode vector
+attr source "warmup(atomic(constant0(packetPushEnded) + sum(packetLength(packetPushStarted)) - sum(packetLength(packetPulled)) - sum(packetLength(packetRemoved)) - sum(packetLength(packetDropped))))"
+attr title "queue bit length"
+attr unit b
+vector 271 ExtUeAppMecAppExample.iUpf.ppp[2].ppp rxPkOk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source rxPkOk
+attr title "packets received OK, packetBytes"
+vector 272 ExtUeAppMecAppExample.iUpf.ppp[2].ppp passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr recordingmode vector(packetBytes)
+attr source packetSentToUpper
+attr title "packets passed to higher layer, packetBytes"
+43	63880 582397 21 136266 0.001 32.768 32768 0 3 13 19
+44	646277 582397 21 136266 0.001 32.768 32768 0 4 13 31
+vector 273 ExtUeAppMecAppExample.iUpf.pppIf.queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 274 ExtUeAppMecAppExample.iUpf.pppIf.queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+vector 275 ExtUeAppMecAppExample.gNodeB1.pppMEHostIf.queue outgoingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPulled)
+attr title "outgoing datarate"
+attr unit bps
+vector 276 ExtUeAppMecAppExample.gNodeB1.pppMEHostIf.queue incomingDataRate:vector ETV
+attr interpolationmode linear
+attr recordingmode vector
+attr source throughput(packetPushStarted)
+attr title "incoming datarate"
+attr unit bps
+0	1229566 333 0 113747 0 27.32400196874 15 0 1 7 7
+1	1229899 363 0 113882 0 27.3380002704 17 0 1 8 8
+2	1230262 187 0 113879 0 27.3380002328 9 0 8 36 204
+3	1230449 8 0 0 0 0 1 0 0 0 0
+4	1230457 8 0 0 0 0 1 0 0 0 0
+5	1230465 429 0 113751 0 27.32400215154 19 0 1 9 9
+6	1230894 366 0 113876 0 27.3380001828 17 0 1 8 8
+7	1231260 52 0 9430 0 2.1490001828 3 0 1 1 1
+8	1231312 8 0 0 0 0 1 0 0 0 0
+9	1231320 8 0 0 0 0 1 0 0 0 0
+10	1231328 9 0 0 0 0 1 0 0 0 0
+11	1231337 9 0 0 0 0 1 0 0 0 0
+12	1231346 366 0 113872 0 27.3380000664 19 0 1 9 9
+13	1231712 9 0 0 0 0 1 0 0 0 0
+14	1231721 228 0 113754 0 27.32400220154 10 0 9 45 285
+15	1231949 9 0 0 0 0 1 0 0 0 0
+16	1231958 9 0 0 0 0 1 0 0 0 0
+17	1231967 103 0 109166 0 26.2540000496 5 0 1 2 2
+18	1232070 9 0 0 0 0 1 0 0 0 0
+19	1232079 9 0 0 0 0 1 0 0 0 0
+20	1232088 9 0 0 0 0 1 0 0 0 0
+21	1232097 110 0 109173 0 26.254000178 5 0 1 2 2
+22	1232207 55 0 9436 0 2.1490002704 3 0 1 1 1
+23	1232262 32 0 9433 0 2.1490002328 2 0 1 1 1
+24	1232294 9 0 0 0 0 1 0 0 0 0
+25	1232303 9 0 0 0 0 1 0 0 0 0
+26	1232312 346 0 113740 0 27.32400178594 15 0 1 7 7
+27	1232658 9 0 0 0 0 1 0 0 0 0
+28	1232667 9 0 0 0 0 1 0 0 0 0
+29	1232676 9 0 0 0 0 1 0 0 0 0
+30	1232685 49 0 113356 0 27.26 3 0 2 3 5
+31	1232734 9 0 0 0 0 1 0 0 0 0
+32	1232743 9 0 0 0 0 1 0 0 0 0
+33	1232752 9 0 0 0 0 1 0 0 0 0
+34	1232761 9 0 0 0 0 1 1 1 1 1
+35	1232770 183 13 113793 0 27.329 11 0 0 0 0
+36	1232953 179 13 113793 0 27.329 9 7504 10607 88596 879262484
+37	1233132 156 13 113793 0 27.329 8 7504 7504 60032 450480128
+38	1233288 153 13 113793 0 27.329 8 0 3103 18809 51336859
+39	1233441 166 16 113797 0 27.329 9 40 345 956 196366
+40	1233607 166 16 113797 0 27.329 9 41 346 965 198287
+41	1233773 166 17 113798 0 27.329 9 41 346 965 198287
+42	1233939 362 19 113840 0 27.334 20 40 348 1970 341348
+43	1234301 136595 136270 166067 32.769 40 7232 0 0 0 0
+44	1370896 136595 136270 166067 32.769 40 7232 0 0 0 0
+45	1507491 463 23 113842 0.001 27.334 27 1 272 1025 143173
+46	1507954 31977 30 165915 0.002 39.962 1000 16.800221991725 58.087322361637 39856.247303583 1659056.4334415
+47	1539931 31968 30 165915 0.002 39.962 1000 35.323845376745 71.924300934182 55201.958544828 3098361.4429746
+48	1571899 18546 31 165916 0.002 39.962 1027 1 272 2025 144173
+49	1590445 643 33 113858 0.002 27.338 38 1 483 1313 436779
+50	1591088 640 41 113891 0.003 27.339 38 1 483 1313 436779
+51	1591728 330 50 113836 0.005 27.334 19 1 481 1278 431660
+52	1592058 328 52 113861 0.005 27.338 20 0 0 0 0
+53	1592386 196 52 113838 0.005 27.334 11 40 270 987 139165
+54	1592582 192 57 113843 0.005 27.334 11 13 15 152 2110
+55	1592774 335 62 113848 0.006 27.335 11 19.056130735645 43.035893514656 336.99011629815 10964.047015405
+56	1593109 226 72 113858 0.009 27.338 11 0.004 0.004 0.044 0.000176
+57	1593335 334 72 113858 0.009 27.338 19 1 270 995 139173
+58	1593669 197 75 113861 0.009 27.338 11 40 270 987 139165
+59	1593866 182 75 113861 0.009 27.338 11 0 0 0 0
+60	1594048 226 75 113861 0.009 27.338 11 0.004 0.004 0.044 0.000176
+61	1594274 262 75 113861 0.009 27.338 9 19.078641228478 5000 9759.2079890945 39234861.056169
+62	1594536 301 75 113861 0.009 27.338 18 0 0 0 0
+63	1594837 194 75 113861 0.009 27.338 9 0.008784304 0.014750135 0.092534439 0.00099573047928264
+64	1595031 159 75 113861 0.009 27.338 9 41 346 965 198287
+65	1595190 182 75 113861 0.009 27.338 11 0 0 0 0
+66	1595372 159 76 113862 0.009 27.338 9 41 346 965 198287
+67	1595531 159 76 113862 0.009 27.338 9 40 345 956 196366
+68	1595690 159 80 113866 0.009 27.338 9 56 361 1100 229262
+69	1595849 168 82 113868 0.009 27.338 9 608 3048 10240 17719168
+70	1596017 147 82 113868 0.009 27.338 9 0 0 0 0
+71	1596164 168 82 113868 0.009 27.338 9 608 3048 10240 17719168
+72	1596332 159 82 113868 0.009 27.338 9 83 388 1343 295223
+73	1596491 147 82 113868 0.009 27.338 9 0 0 0 0
+74	1596638 147 82 113868 0.009 27.338 9 0 0 0 0
+75	1596785 222 87 113873 0.0090001196 27.3380001164 9 83 388 1343 295223
+76	1597007 222 87 113873 0.0090001196 27.3380001164 9 76 381 1280 276862
+77	1597229 206 89 113875 0.0090001196 27.3380001164 8 608 3048 9632 17349504
+78	1597435 187 89 113875 0.0090001196 27.3380001164 8 0 0 0 0
+79	1597622 206 89 113875 0.0090001196 27.3380001164 8 608 3048 9632 17349504
+80	1597828 198 89 113875 0.0090001196 27.3380001164 8 83 388 1260 288334
+81	1598026 187 89 113875 0.0090001196 27.3380001164 8 0 0 0 0
+82	1598213 187 89 113875 0.0090001196 27.3380001164 8 0 0 0 0
+83	1598400 198 91 113877 0.0090002392 27.3380002328 8 83 388 1260 288334
+84	1598598 198 91 113877 0.0090002392 27.3380002328 8 76 381 1204 271086
+85	1598796 198 93 113879 0.0090002392 27.3380002328 8 56 361 1044 226126
+86	1598994 206 95 113881 0.0090002392 27.3380002328 8 320 2760 7328 12465024
+87	1599200 187 95 113881 0.0090002392 27.3380002328 8 0 0 0 0
+88	1599387 206 95 113881 0.0090002392 27.3380002328 8 320 2760 7328 12465024
+89	1599593 198 95 113881 0.0090002392 27.3380002328 8 47 352 972 207982
+90	1599791 187 95 113881 0.0090002392 27.3380002328 8 0 0 0 0
+91	1599978 187 95 113881 0.0090002392 27.3380002328 8 0 0 0 0
+92	1600165 195 97 113883 0.00900033 27.3380003204 8 47 352 972 207982
+93	1600360 195 97 113883 0.00900033 27.3380003204 8 40 345 916 194766
+94	1600555 19 99 99 0.00900033 0.00900033 1 0 0 0 0
+95	1600574 19 99 99 0.00900033 0.00900033 1 0 0 0 0
+96	1600593 19 99 99 0.00900033 0.00900033 1 0 0 0 0
+97	1600612 210 99 113737 0.00900033 27.32400168194 8 7505 8097 62430 487631662
+98	1600822 128 99 113885 0.00900033 27.3380003204 5 7504 7504 37520 281550080
+99	1600950 238 99 113737 0.00900033 27.32400168194 10 0 0 0 0
+100	1601188 195 99 113737 0.00900033 27.32400168194 7 7504 7504 52528 394170112
+101	1601383 186 99 113737 0.00900033 27.32400168194 7 1 593 2397 1162349
+102	1601569 191 101 113739 0.00900033 27.32400168194 7 320 3824 9088 24831360
+103	1601760 175 101 113739 0.00900033 27.32400168194 7 0 0 0 0
+104	1601935 191 101 113739 0.00900033 27.32400168194 7 320 3824 9088 24831360
+105	1602126 185 101 113739 0.00900033 27.32400168194 7 47 485 1185 404237
+106	1602311 175 101 113739 0.00900033 27.32400168194 7 0 0 0 0
+107	1602486 175 101 113739 0.00900033 27.32400168194 7 0 0 0 0
+108	1602661 186 103 113741 0.0090004208 27.32400183594 7 47 485 1185 404237
+109	1602847 186 103 113741 0.0090004208 27.32400183594 7 40 478 1136 387990
+110	1603033 186 106 113744 0.0090004208 27.32400183594 7 56 494 1248 426134
+111	1603219 193 108 113746 0.0090004208 27.32400183594 7 608 4112 11104 30646656
+112	1603412 176 108 113746 0.0090004208 27.32400183594 7 0 0 0 0
+113	1603588 193 108 113746 0.0090004208 27.32400183594 7 608 4112 11104 30646656
+114	1603781 186 108 113746 0.0090004208 27.32400183594 7 83 521 1437 498629
+115	1603967 176 108 113746 0.0090004208 27.32400183594 7 0 0 0 0
+116	1604143 176 108 113746 0.0090004208 27.32400183594 7 0 0 0 0
+117	1604319 187 110 113748 0.0090005404 27.32400201874 7 83 521 1437 498629
+118	1604506 187 110 113748 0.0090005404 27.32400201874 7 76 514 1388 478854
+119	1604693 250 112 113750 0.0090005404 27.32400201874 9 608 4112 12528 31661056
+120	1604943 229 112 113750 0.0090005404 27.32400201874 9 0 0 0 0
+121	1605172 250 112 113750 0.0090005404 27.32400201874 9 608 4112 12528 31661056
+122	1605422 241 112 113750 0.0090005404 27.32400201874 9 83 521 1629 517069
+123	1605663 229 112 113750 0.0090005404 27.32400201874 9 0 0 0 0
+124	1605892 229 112 113750 0.0090005404 27.32400201874 9 0 0 0 0
+125	1606121 240 114 113752 0.00900066 27.32400220154 9 83 521 1629 517069
+126	1606361 240 114 113752 0.00900066 27.32400220154 9 76 514 1566 494704
+127	1606601 240 116 113754 0.00900066 27.32400220154 9 56 494 1386 435664
+128	1606841 240 119 113757 0.00900066 27.32400220154 9 40 478 1242 393616
+129	1607081 240 119 113757 0.00900066 27.32400220154 9 41 479 1251 396109
+130	1607321 240 120 113758 0.00900066 27.32400220154 9 41 479 1251 396109
+131	1607561 396 122 113765 0.00900066 27.325 17 43 481 2536 832798
+132	1607957 145 125 113763 0.01 27.325 8 0 0 0 0
+133	1608102 156 125 113763 0.01 27.325 8 43 481 1267 431649
+134	1608258 192 133 113891 0.01 27.339 11 0 0 0 0
+135	1608450 192 133 113891 0.01 27.339 11 0 0 0 0
+136	1608642 192 133 113891 0.01 27.339 11 1 1 11 11
+137	1608834 151 138 113774 0.011 27.326 8 15 15 120 1800
+138	1608985 253 138 113774 0.011 27.326 8 67.058494715804 214.35717855952 1083.9022816043 179715.6685222
+139	1609238 253 138 113774 0.011 27.326 8 43.51855388556 60.847211210968 411.91340886345 21432.113636697
+140	1609491 178 150 113786 0.014 27.329 8 0.004 0.004 0.032 0.000128
+141	1609669 157 153 113789 0.014 27.329 8 43 481 1267 431649
+142	1609826 146 153 113789 0.014 27.329 8 0 0 0 0
+143	1609972 178 153 113789 0.014 27.329 8 0.004 0.004 0.032 0.000128
+144	1610150 289 153 113789 0.014 27.329 9 3.2788952645186 3214.2857142857 4262.6170520468 10653448.553133
+145	1610439 163 153 113789 0.014 27.329 9 0 0 0 0
+146	1610602 264 153 113789 0.014 27.329 9 0.0042464992 0.0049996436 0.044210422745 0.00021767254131853
+147	1610866 175 153 113789 0.014 27.329 9 41 479 1251 396109
+148	1611041 146 153 113789 0.014 27.329 8 0 0 0 0
+149	1611187 175 154 113790 0.014 27.329 9 41 479 1251 396109
+150	1611362 175 154 113790 0.014 27.329 9 40 478 1242 393616
+151	1611537 145 157 113793 0.014 27.329 7 2250 3020 17956 46770750
+152	1611682 136 157 113793 0.014 27.329 7 1 593 2397 1162349
+153	1611818 129 157 113793 0.014 27.329 7 0 438 852 308294
+154	1611947 82 157 113542 0.014 27.279 4 7504 7504 30016 225240064
+155	1612029 142 172 113808 0.015 27.33 8 0 0 0 0
+156	1612171 142 172 113808 0.015 27.33 8 0 0 0 0
+157	1612313 142 172 113808 0.015 27.33 8 1 1 8 8
+158	1612455 182 244 113885 0.0230003204 27.3380003204 7 1 593 1805 810701
+159	1612637 193 244 113885 0.0230003204 27.3380003204 7 2251 3103 18809 51336859
+160	1612830 178 244 113885 0.0230003204 27.3380003204 7 0 305 592 134270
+161	1613008 183 244 113885 0.0230003204 27.3380003204 7 0 438 852 308294
+162	1613191 208 8575 135143 2.043249865 32.496653141 9 64 111 647 48369
+163	1613399 208 8575 135143 2.043249865 32.496653141 9 64 111 647 48369
+164	1613607 142 8576 135144 2.043249865 32.496653141 6 46 48 280 13072
+165	1613749 44 8578 113356 2.043249865 27.26 2 28 28 56 1568
+166	1613793 63 8580 113358 2.043249865 27.26 3 1 455 606 229526
+167	1613856 119 8580 113542 2.043249865 27.279 6 0 305 592 134270
+168	1613975 6998 8688 166071 0.1 40 400 0 54560 102400 3610470400
+169	1620973 6998 8688 166071 0.1 40 400 0 54560 102400 3610470400
+170	1627971 6997 8695 166071 0.1 40 400 0 54560 96320 3499571200
+171	1634968 6997 8695 166071 0.1 40 400 0 54560 96320 3499571200
+172	1641965 6996 8701 166071 0.1 40 400 0 45920 73280 2377062400
+173	1648961 6996 8701 166071 0.1 40 400 0 45920 73280 2377062400
+174	1655957 149 8705 113885 2.058000678 27.3380003204 6 0 0 0 0
+175	1656106 6996 8708 166071 0.1 40 400 0 38240 90880 2883520000
+176	1663102 6996 8708 166071 0.1 40 400 0 38240 90880 2883520000
+177	1670098 6997 8715 166071 0.1 40 400 0 44720 111040 3930457600
+178	1677095 6997 8715 166071 0.1 40 400 0 44720 111040 3930457600
+179	1684092 6866 8719 166071 0.1 40 400 0 44720 125280 4031897600
+180	1690958 6866 8719 166071 0.1 40 400 0 44720 125280 4031897600
+181	1697824 113 8730 113506 2.058006376481 27.27400168194 3 1.03034e-06 1.9600034e-05 2.6328855e-05 4.1769561902412e-10
+182	1697937 89 8731 113737 2.058006376481 27.32400168194 3 2251 3020 7853 20854125
+183	1698026 72 8792 113542 2.063 27.279 3 0.015 0.019750135 0.053750135 0.00097606783251822
+184	1698098 93 8792 113542 2.063 27.279 3 0.002468766875 0.005905774639 0.01240971253 5.7255589098119e-05
+185	1698191 93 8792 113542 2.063 27.279 3 0.507572763135 0.658718766875 1.744236855166 1.0255613225795
+186	1698284 92 8792 113542 2.063 27.279 3 2.036196827179 2.637343834375 6.989357133194 16.464685950049
+187	1698376 63 8792 113542 2.063 27.279 3 1072 1608 3752 4884032
+188	1698439 81 8792 113542 2.063 27.279 3 4294967295 4294967295 12884901885 5.5340232195359e+19
+189	1698520 108 8792 113793 2.063 27.329 6 0 0 0 0
+190	1698628 113 8889 113885 2.0720003204 27.3380003204 3 0.013979667966 0.01399863846 0.041972250345 0.00058722346158151
+191	1698741 113 8889 113885 2.0720003204 27.3380003204 3 0.00174924299 0.004618120156 0.009645409258 3.5132471125716e-05
+192	1698854 113 8889 113885 2.0720003204 27.3380003204 3 0.506458447189 0.65799924299 1.741735830917 1.0227132142784
+193	1698967 113 8889 113885 2.0720003204 27.3380003204 3 2.030451908912 2.63374621495 6.976588732926 16.406504408055
+194	1699080 84 8889 113885 2.0720003204 27.3380003204 3 1072 1608 3752 4884032
+195	1699164 102 8889 113885 2.0720003204 27.3380003204 3 4294967295 4294967295 12884901885 5.5340232195359e+19
+196	1699266 39 9298 113830 2.138 27.334 2 10 35 45 1325
+197	1699305 18 9299 9299 2.138 2.138 1 28 28 28 784
+198	1699323 154 9300 135146 2.138 32.496653141 7 28 55 275 11903
+199	1699477 154 9301 135147 2.138 32.496653141 7 46 73 401 24071
+200	1699631 154 9301 135147 2.138 32.496653141 7 46 73 401 24071
+201	1699785 50 9323 135145 2.13989406 32.496653141 2 28 28 56 1568
+202	1699835 26 9429 9429 2.1490001164 2.1490001164 1 608 608 608 369664
+203	1699861 6982 9429 166071 0.1 40 400 0 6080 6080 36966400
+204	1706843 24 9429 9429 2.1490001164 2.1490001164 1 0 0 0 0
+205	1706867 26 9429 9429 2.1490001164 2.1490001164 1 608 608 608 369664
+206	1706893 6982 9429 166071 0.1 40 400 0 6080 6080 36966400
+207	1713875 25 9429 9429 2.1490001164 2.1490001164 1 83 83 83 6889
+208	1713900 24 9429 9429 2.1490001164 2.1490001164 1 0 0 0 0
+209	1713924 24 9429 9429 2.1490001164 2.1490001164 1 0 0 0 0
+210	1713948 25 9431 9431 2.1490002328 2.1490002328 1 83 83 83 6889
+211	1713973 25 9431 9431 2.1490002328 2.1490002328 1 76 76 76 5776
+212	1713998 25 9433 9433 2.1490002328 2.1490002328 1 56 56 56 3136
+213	1714023 26 9435 9435 2.1490002328 2.1490002328 1 320 320 320 102400
+214	1714049 6982 9435 166071 0.1 40 400 0 3200 3200 10240000
+215	1721031 24 9435 9435 2.1490002328 2.1490002328 1 0 0 0 0
+216	1721055 26 9435 9435 2.1490002328 2.1490002328 1 320 320 320 102400
+217	1721081 6982 9435 166071 0.1 40 400 0 3200 3200 10240000
+218	1728063 25 9435 9435 2.1490002328 2.1490002328 1 47 47 47 2209
+219	1728088 24 9435 9435 2.1490002328 2.1490002328 1 0 0 0 0
+220	1728112 24 9435 9435 2.1490002328 2.1490002328 1 0 0 0 0
+221	1728136 25 9437 9437 2.1490003204 2.1490003204 1 47 47 47 2209
+222	1728161 25 9437 9437 2.1490003204 2.1490003204 1 40 40 40 1600
+223	1728186 25 9438 9438 2.1490003204 2.1490003204 1 28 28 28 784
+224	1728211 412 9439 109201 2.1490003204 26.255234535 16 28 576 3230 1453602
+225	1728623 412 9440 109202 2.1490003204 26.255234535 16 46 594 3518 1575066
+226	1729035 412 9440 109202 2.1490003204 26.255234535 16 46 594 3518 1575066
+227	1729447 517 9447 112749 2.150642265 27.113574337 21 64 532 2369 652395
+228	1729964 517 9447 112749 2.150642265 27.113574337 21 64 532 2369 652395
+229	1730481 442 9448 109196 2.150642265 26.255234535 18 46 514 1786 558994
+230	1730923 38 9453 66112 2.151 15.854 2 28 28 56 1568
+231	1730961 32 9462 9462 2.151560209 2.151560209 1 3541909978 3541909978 3541909978 1.2545126292256e+19
+232	1730993 23 9462 9462 2.151560209 2.151560209 1 0 0 0 0
+233	1731016 23 9462 9462 2.151560209 2.151560209 1 0 0 0 0
+234	1731039 446 9462 109198 2.151560209 26.255234535 13 3541917483 3541918426 46044935272 1.6308738955405e+20
+235	1731485 284 9462 109158 2.151560209 26.253596052 10 63784 64240 638752 40800744448
+236	1731769 354 9462 109198 2.151560209 26.255234535 14 0 0 0 0
+237	1732123 342 9462 109198 2.151560209 26.255234535 12 7504 7504 90048 675720192
+238	1732465 414 9462 109198 2.151560209 26.255234535 12 3541909979 3541910922 42502927741 1.5054157221306e+20
+239	1732879 403 9472 109198 2.152307715 26.255234535 12 3541909979 3541910921 42502926798 1.5054156553301e+20
+240	1733282 355 9472 109198 2.152307715 26.255234535 12 537891 540513 6471206 3489718800466
+241	1733637 299 9472 109198 2.152307715 26.255234535 12 0 474 942 443700
+242	1733936 445 9472 109158 2.152307715 26.253596052 17 0 536 2622 1220354
+243	1734381 272 9478 109198 2.152662655 26.255234535 11 0 0 0 0
+244	1734653 76 9483 66126 2.15269150879 15.854281669631 2 1.9698631e-05 2.885379e-05 4.8552421e-05 1.2205772606383e-09
+245	1734729 249 9484 109152 2.15269150879 26.253200147 8 537891 540338 4313054 2325309081022
+246	1734978 289 9494 109158 2.153163884 26.253596052 8 0.000328619 0.002706901369 0.005633514362 8.5647039944493e-06
+247	1735267 300 9494 109158 2.153163884 26.253596052 8 5.9046901e-05 0.000487901963 0.002371233039 9.7319663528006e-07
+248	1735567 302 9494 109158 2.153163884 26.253596052 8 0.258019454916 0.656309046901 3.447941925494 1.6219339223565
+249	1735869 302 9494 109158 2.153163884 26.253596052 8 1.032543859853 2.625295234505 13.794138935015 25.957719489417
+250	1736171 222 9494 109158 2.153163884 26.253596052 8 1072 2680 12864 22983680
+251	1736393 270 9494 109158 2.153163884 26.253596052 8 4294967295 4294967295 34359738360 1.4757395252096e+20
+252	1736663 49 66133 109161 15.854753154 26.254 2 408 440 848 360064
+253	1736712 6869 66133 166071 0.1 40 400 0 4400 8480 36006400
+254	1743581 45 66133 109161 15.854753154 26.254 2 0 0 0 0
+255	1743626 49 66133 109161 15.854753154 26.254 2 408 440 848 360064
+256	1743675 6869 66133 166071 0.1 40 400 0 4400 8480 36006400
+257	1750544 47 66133 109161 15.854753154 26.254 2 58 62 120 7208
+258	1750591 45 66133 109161 15.854753154 26.254 2 0 0 0 0
+259	1750636 45 66133 109161 15.854753154 26.254 2 0 0 0 0
+260	1750681 55 66135 109167 15.8547532504 26.2540000996 2 58 62 120 7208
+261	1750736 55 66135 109167 15.8547532504 26.2540000996 2 51 55 106 5626
+262	1750791 55 66138 109170 15.8547532504 26.2540000996 2 67 71 138 9530
+263	1750846 57 66140 109172 15.8547532504 26.2540000996 2 696 728 1424 1014400
+264	1750903 6869 66140 166071 0.1 40 400 0 7280 14240 101440000
+265	1757772 53 66140 109172 15.8547532504 26.2540000996 2 0 0 0 0
+266	1757825 57 66140 109172 15.8547532504 26.2540000996 2 696 728 1424 1014400
+267	1757882 6869 66140 166071 0.1 40 400 0 7280 14240 101440000
+268	1764751 55 66140 109172 15.8547532504 26.2540000996 2 94 98 192 18440
+269	1764806 53 66140 109172 15.8547532504 26.2540000996 2 0 0 0 0
+270	1764859 53 66140 109172 15.8547532504 26.2540000996 2 0 0 0 0
+271	1764912 54 66142 109174 15.8547533756 26.254000228 2 94 98 192 18440
+272	1764966 54 66142 109174 15.8547533756 26.254000228 2 87 91 178 15850
+273	1765020 7021 166071 166071 0.1 40 400 0 0 0 0
+274	1772041 7021 166071 166071 0.1 40 400 0 0 0 0
+275	1779062 7021 166071 166071 0.1 40 400 0 0 0 0
+276	1786083 7021 166071 166071 0.1 40 400 0 0 0 0
+
