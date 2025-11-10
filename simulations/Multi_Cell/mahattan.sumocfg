@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2024-03-13 17:32:32 by Eclipse SUMO sumo Version 1.19.0
+-->
+
+<configuration>
+
+    <input>
+        <net-file value="mahattan.net.xml"/>
+        <route-files value="mahattanRoutes.rou.xml"/>
+    </input>
+
+</configuration>
