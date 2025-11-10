@@ -1,6 +1,5 @@
 # A-Co-Simulation-Platform-for-Mixed-Traffic-Flow-of-Vehicular-Networks
 Code for 'A Co-Simulation Platform for Mixed Traffic Flow of Vehicular Networks'
-You can directly download the virtual machine and use it directly： https://1drv.ms/u/c/8ab44f8acf07f410/EQxFypVEnVNNl6tA-Fi2xaoBUiXwTyjVIa6ZP7MYkr28DA?e=8twCfg
 # Simu5G
 5G NR and LTE/LTE-A user-plane simulation model, compatible with the INET Framework. 
 Website: http://simu5g.org
