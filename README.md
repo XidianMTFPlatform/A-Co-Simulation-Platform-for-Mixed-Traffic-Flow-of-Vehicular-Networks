@@ -1,5 +1,6 @@
 # A-Co-Simulation-Platform-for-Mixed-Traffic-Flow-of-Vehicular-Networks
 Code for 'A Co-Simulation Platform for Mixed Traffic Flow of Vehicular Networks'
+You need to put all these files into a folder named 'Simu5G'
 # Simu5G
 5G NR and LTE/LTE-A user-plane simulation model, compatible with the INET Framework. 
 Website: http://simu5g.org
