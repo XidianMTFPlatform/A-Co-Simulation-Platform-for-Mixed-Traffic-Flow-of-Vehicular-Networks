@@ -3,6 +3,7 @@ Code for 'A Co-Simulation Platform for Mixed Traffic Flow of Vehicular Networks'
 # Simu5G
 5G NR and LTE/LTE-A user-plane simulation model, compatible with the INET Framework. 
 Website: http://simu5g.org
+https://1drv.ms/u/c/8ab44f8acf07f410/EQxFypVEnVNNl6tA-Fi2xaoBLHCGRceioFpxBuOdimSWKQ?email=zhiyi%40stu.xidian.edu.cn&e=klsq17
 # Dependencies
 This version requires:
   + OMNeT++ 6.0.3 or later
